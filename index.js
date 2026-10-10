@@ -23,7 +23,7 @@ async function randomUser(){
     try{
         const response=await fetch("https://randomuser.me/api/");
         const data=await response.json();
-        const user=data.results?.[0];
+        const user=data.results[0];
         document.getElementById("user-name").innerHTML=`${user.name.first} ${user.name.last}`;
         document.getElementById("user-gender").innerHTML=user.gender;
         document.getElementById("image").src=user.picture.large; 
